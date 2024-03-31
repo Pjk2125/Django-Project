@@ -1,0 +1,20 @@
+INSERT INTO user (username, email) VALUES
+('user1', 'user1@example.com'),
+('user2', 'user2@example.com'),
+('user3', 'user3@example.com');
+
+INSERT INTO client (client_name, created_by) VALUES
+('Nimap', 1),
+('Infotech', 2);
+
+INSERT INTO project (project_name, client_id, created_by) VALUES
+('Project A', 1, 1),
+('Project B', 1, 2);
+
+INSERT INTO project_user (project_id, user_id) VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(2, 3);
+
+GRANT ALL PRIVILEGES ON your_database_name.* TO 'sample'@'localhost' IDENTIFIED BY 'YES';
